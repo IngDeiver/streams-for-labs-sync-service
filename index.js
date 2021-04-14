@@ -1,10 +1,10 @@
 const { createServer } = require('sync-files-cipher')
 const { queryVault } = require('./apivault')
-
+const AES_VAULT_URI = process.env.AES_VAULT_URI | ''
 
 async function startServer (){
     try {
-        const  keys  = await queryVault('/v1/kv/cypher')
+        const  keys  = await queryVault(AES_VAULT_URI)
         createServer(
             keys.key,
             keys.iv,

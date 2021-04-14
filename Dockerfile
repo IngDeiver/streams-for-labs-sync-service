@@ -5,8 +5,6 @@ WORKDIR /usr/streamsforlab/sync-service
 
 COPY package*.json ./
 
-ENV VAULT_TOKEN=s.svTh5haBOLUE37V7sjrFKABm
-
 RUN npm install
 
 
